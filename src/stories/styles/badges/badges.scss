@@ -1,0 +1,26 @@
+@import "../colors/colors.scss";
+@import "../text-styles/textStyles.scss";
+
+.badge {
+  width: 89px;
+  height: 30px;
+  border-radius: 100px;
+  padding: 8px 16px 8px 16px;
+  border: 1px solid $inactive-font;
+  box-sizing: border-box;
+  border-radius: 100px;
+  color: $inactive-font;
+
+  @extend .caption-text;
+
+  &.-active {
+    background: $primary-color;
+    color: $light-font;
+    border: none;
+  }
+  &.-neutral {
+    background-color: $secondary-color-1;
+    color: $light-font;
+    border: none;
+  }
+}

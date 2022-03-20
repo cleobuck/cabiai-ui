@@ -1,0 +1,33 @@
+@import "../../styles/colors/colors.scss";
+
+.toggle-button {
+  width: 70px;
+  height: 30px;
+  border-radius: 19px;
+  background: $inactive-color;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &.-active {
+    background: $primary-color-inactive;
+    justify-content: flex-end;
+  }
+
+  .inner-toggle {
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    background: $light-font;
+    position: absolute;
+    margin-left: 5px;
+    margin-right: 5px;
+    // left: 5px;
+    // top: 50%;
+    // transform: translateY(-50%);
+    &.-active {
+      background: $primary-color;
+    }
+  }
+}

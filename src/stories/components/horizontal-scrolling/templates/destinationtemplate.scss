@@ -1,0 +1,30 @@
+
+@import "../../../styles/text-styles/textStyles.scss";
+@import "../../../styles/colors/colors.scss";
+
+.destination-scroll-template {
+
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $light-font;
+  flex-direction: column;
+  .scroll-destination-title {
+  @extend .header-5;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+
+  }
+
+  .scroll-destination-posts {
+    font-family: "Montserrat";
+    font-size: 10px;
+    line-height: 10px;
+  
+  }
+}

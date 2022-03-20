@@ -1,0 +1,201 @@
+@import "../../styles/colors/colors.scss";
+
+.temporary-background {
+  width: 100%;
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  align-items: flex-start;
+}
+
+$end: "0-5.9268 0-16.672 10.7452-16.672 24V45C5 58.2548 15.7452 69 29 69H371C384.255 69 395 58.2548 395 45V29C395 18.3009 387.999 9.2369 378.328 6.1394Z";
+$middleHole: "C250.745 5 240.511 16.6533 233.017 27.5866 225.81 38.1017 213.711 45 200 45 186.289 45 174.19 38.1017 166.983 27.5866 159.489 16.6533 149.255 5 136 5";
+$beginning: "M378.328 6.1394H378";
+$horizontal: "h-9";
+$hole: "c-1.194-.3825-2.353.5442-2.505 1.7889-1.444 11.8736-11.559 21.0717-23.823 21.0717-12.582 0-22.902-9.6813-23.918-22.0006-.091-1.1008-.977-1.9994-2.082-1.9994";
+$filled: "c-1.194 0-2.353 0-2.505 0-1.444 0-11.559 0-23.823 0-12.582 0-22.902 0-23.918 0-.091 0-.977 0-2.082 0";
+$horizontal2: "h-7";
+$fullPath: $beginning + $filled + $horizontal + $filled + $middleHole + $filled +
+  $horizontal + $filled + $end;
+
+$userPath: $beginning + $hole + $horizontal + $filled + $middleHole + $filled +
+  $horizontal + $filled + $end;
+
+$postPath: $beginning + $filled + $horizontal + $filled + $middleHole + $filled +
+  $horizontal + $hole + $end;
+
+$advantagesPath: $beginning + $filled + $horizontal2 + $hole + $middleHole +
+  $filled + $horizontal + $filled + $end;
+
+$favouritePath: $beginning + $filled + $horizontal + $filled + $middleHole +
+  $hole + $horizontal + $filled + $end;
+
+@debug $fullPath;
+
+$animTime: 0.35s;
+$delay: 0s;
+
+@mixin createSlide($firstPath, $secondPath, $anim) {
+  @keyframes #{$anim} {
+    from {
+      d: path($firstPath);
+    }
+
+    to {
+      d: path($secondPath);
+    }
+  }
+  animation: $animTime $anim $delay forwards ease-out;
+}
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 18.9%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+svg.menu-background {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &.user-active path {
+    @include createSlide($fullPath, $userPath, userAnim);
+  }
+  &.posts-active path {
+    @include createSlide($fullPath, $postPath, postAnim);
+  }
+  &.advantages-active path {
+    @include createSlide($fullPath, $advantagesPath, advantagesAnim);
+  }
+  &.favorite-active path {
+    @include createSlide($fullPath, $favouritePath, favouriteAnim);
+  }
+}
+
+.menu-wrapper {
+  position: relative;
+  width: 100%;
+
+  ul.menu-bar {
+    height: 100%;
+    $padding: 0px;
+    $width: calc(100% - ($padding * 2));
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    li {
+      $firstDistance: 12.2%;
+      $secondDistance: 27.4%;
+      $thirdDistance: 12.5%;
+      position: absolute;
+      bottom: 5vw;
+      transform: translateX(-50%);
+      &:first-of-type {
+        left: $firstDistance;
+      }
+      &:nth-of-type(2) {
+        left: $secondDistance;
+      }
+      &:nth-of-type(3) {
+        left: 50%;
+      }
+      &:nth-of-type(4) {
+        right: $secondDistance;
+        transform: translateX(50%);
+      }
+      &:last-of-type {
+        right: $thirdDistance;
+        transform: translateX(50%);
+      }
+    }
+
+    .navlink {
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 300;
+      color: $dark-font;
+      text-decoration: none;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 2vw;
+
+      img {
+        fill: $light-font;
+        $length: 6.5vw;
+        width: $length;
+        height: $length;
+        border-radius: 100%;
+        &.profile-icon {
+          $length: 7vw;
+          height: $length;
+          width: $length;
+          padding: 0.4vw;
+          @include background-gradient();
+        }
+  
+      }
+
+      @mixin animation-slideUp($to, $name, $delai: 0s) {
+        @keyframes #{$name} {
+          0% {
+            bottom: 0;
+          }
+          100% {
+            bottom: $to;
+          }
+        }
+
+        animation: 0.35s #{$name} $delai forwards ease-out;
+      }
+
+      &.navlink--active {
+        color: $primary-color;
+        font-weight: 400;
+        .label {
+          position: relative;
+          @include animation-slideUp(1vw, slideImgUp);
+        }
+        img {
+          @include background-gradient();
+          display: block;
+          position: relative;
+          bottom: 0;
+          padding: 1.4vw;
+
+      &.profile-icon {
+        padding: 0.4vw;
+      }
+
+          @include animation-slideUp(4vw, slideUp);
+        }
+      }
+
+      &.menu-add-button {
+        width: 15vw;
+        height: 15vw;
+        img {
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+          bottom: 5vw;
+        }
+      }
+    }
+  }
+}

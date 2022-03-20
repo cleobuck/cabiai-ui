@@ -1,0 +1,13 @@
+.icons-set {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  img {
+    margin-right: 50px;
+    margin-top: 20px;
+    width: 50px;
+    padding: 30px;
+    background: lightcoral;
+    border-radius: 5px;
+  }
+}

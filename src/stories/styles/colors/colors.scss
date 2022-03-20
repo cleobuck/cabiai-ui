@@ -1,0 +1,84 @@
+$warning-color: #ef764b;
+$error-color: #ed4a4a;
+$success-color: #00af9e;
+$information-color: #007ecc;
+$dark-font: #262c2d;
+$light-font: #f8fcfd;
+$inactive-font: #334243;
+$placeholder-font: #a3b3b5;
+$primary-color: #0396a6;
+$primary-color-inactive: #b4ece7;
+$secondary-color-1: #f28963;
+$secondary-color-2: #024873;
+$secondary-color-3: #f25e5e;
+$inactive-color: #adbfc1;
+
+@mixin background-gradient() {
+  background: linear-gradient(
+    270deg,
+    $primary-color-inactive 0%,
+    $primary-color 100%
+  );
+}
+
+.colors-display {
+  width: 650px;
+
+  display: flex;
+  flex-wrap: wrap;
+  p {
+    width: 150px;
+    height: 150px;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.primary-color {
+  background: $primary-color;
+}
+.primary-color-inactive {
+  background: $primary-color-inactive;
+}
+.secondary-color-1 {
+  background: $secondary-color-1;
+}
+.secondary-color-2 {
+  background: $secondary-color-2;
+}
+.secondary-color-3 {
+  background: $secondary-color-3;
+}
+.inactive-color {
+  background: $inactive-color;
+}
+.warning-color {
+  background: $warning-color;
+}
+.error-color {
+  background: $error-color;
+}
+.success-color {
+  background: $success-color;
+}
+.information-color {
+  background: $information-color;
+}
+.dark-font {
+  color: $dark-font;
+}
+.light-font {
+  color: $light-font;
+  background: $dark-font;
+}
+.inactive-font {
+  color: $inactive-font;
+}
+.placeholder-font {
+  color: $placeholder-font;
+}
