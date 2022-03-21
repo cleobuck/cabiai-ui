@@ -1,0 +1,59 @@
+@import "../../styles/colors/colors.scss";
+@import "../../styles/text-styles/textStyles.scss";
+
+.range-button {
+  $padding: 23px;
+  $valueBoxWidth: 26px;
+  background: $light-font;
+  box-shadow: none;
+  border: 1px solid $primary-color;
+
+  padding: 23px;
+  justify-content: space-between;
+
+  .start-value,
+  .end-value {
+    display: inline-block;
+    width: $valueBoxWidth;
+    height: calc(#{valueBoxWidth-2px});
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $primary-color;
+    color: $light-font;
+    border-radius: 3px;
+    @extend .caption-text;
+    &.start-value {
+      margin-right: 16px;
+    }
+    &.end-value {
+      margin-left: 16px;
+    }
+  }
+
+  .range-line {
+    height: 5px;
+    display: inline-block;
+    width: calc(100% - #{$padding * 2} - #{$valueBoxWidth * 2});
+    position: relative;
+
+    background: $primary-color-inactive;
+  }
+
+  .start-bubble,
+  .end-bubble {
+    height: 22px;
+    width: 22px;
+    border-radius: 100%;
+    background: $primary-color;
+    position: absolute;
+    top: 0;
+
+    transform: translateY(-50%);
+  }
+
+  .middle-line {
+    // $width: calc(100% - 110px);
+    // width: $width;
+  }
+}

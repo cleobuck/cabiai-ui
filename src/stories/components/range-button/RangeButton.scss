@@ -1,0 +1,96 @@
+@import "../../styles/colors/colors.scss";
+@import "../../styles/text-styles/textStyles.scss";
+
+$width: 250px;
+.slider {
+  position: relative;
+  width: $width;
+}
+
+.slider__track,
+.slider__range {
+  border-radius: 100px;
+  height: 5px;
+  position: absolute;
+}
+
+.slider__track {
+  background-color: $primary-color-inactive;
+  width: 100%;
+  z-index: 1;
+}
+
+.slider__range {
+  background-color: $primary-color;
+  z-index: 2;
+}
+
+/* Removing the default appearance */
+.thumb,
+.thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.thumb {
+  pointer-events: none;
+  position: absolute;
+  height: 0;
+  width: $width;
+  outline: none;
+}
+
+.thumb--zindex-3 {
+  z-index: 3;
+}
+
+.thumb--zindex-4 {
+  z-index: 4;
+}
+
+.thumb--zindex-5 {
+  z-index: 5;
+}
+
+/* For Chrome browsers */
+.thumb::-webkit-slider-thumb {
+  background-color: $primary-color;
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin-top: 4px;
+  pointer-events: all;
+  position: relative;
+}
+
+/* For Firefox browsers */
+.thumb::-moz-range-thumb {
+  background-color: $primary-color;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin-top: 4px;
+  pointer-events: all;
+  position: relative;
+}
+
+.slider__left-value,
+.slider__right-value {
+  color: #dee2e6;
+  font-size: 12px;
+  margin-top: 20px;
+  position: absolute;
+}
+
+.slider__left-value {
+  left: 6px;
+}
+
+.slider__right-value {
+  right: -4px;
+}
