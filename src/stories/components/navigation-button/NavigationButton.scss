@@ -1,0 +1,17 @@
+@import "../../styles/colors/colors.scss";
+@import "../../styles/text-styles/textStyles.scss";
+
+.titled-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 363px;
+  @extend .body-1;
+
+  .navigation-chevron {
+    width: 10px;
+    height: 19px;
+    fill: $primary-color;
+    transform: rotate(180deg);
+    align-self: center;
+  }
+}
