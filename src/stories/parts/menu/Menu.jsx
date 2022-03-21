@@ -68,7 +68,7 @@ const path = "M378.328 6.1394H378c-1.194 0-2.353 0-2.505 0-1.444 0-11.559 0-23.8
             <NavLink label="Favoris" active={activeLink === "Favoris"} icon={FavoriteIcon} iconActive={FavoriteIconActive} />
             <NavLink label="Poster" icon={AddButton} iconActive={AddButton} className="menu-add-button" ghostElement />
             <NavLink label="Avantages" active={activeLink === "Avantages"} icon={AdvantagesIcon} iconActive={AdvantagesIconActive} />
-            <NavLink label="Compte"  active={activeLink === "Compte"} profilePicture={profilePicture} icon={profilePicture || UserIcon} iconActive={profilePicture || UserIconActive} />:
+            <NavLink label="Compte"  active={activeLink === "Compte"} profilePicture={profilePicture} icon={profilePicture || UserIcon} iconActive={profilePicture || UserIconActive} />
 
           </ul>
         </div>

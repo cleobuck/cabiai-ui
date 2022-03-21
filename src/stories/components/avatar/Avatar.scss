@@ -1,0 +1,15 @@
+@import "../../styles/colors/colors.scss";
+
+.avatar-wrapper {
+  display: block;
+  border-radius: 100%;
+  overflow: hidden;
+
+  &.-active {
+    border: 3px solid $primary-color;
+  }
+
+  img {
+    width: 100%;
+  }
+}
