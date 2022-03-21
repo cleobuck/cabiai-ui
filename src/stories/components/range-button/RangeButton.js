@@ -3,7 +3,7 @@ import "./RangeButton.scss";
 import React, { useEffect, useState, useCallback } from "react";
 import PropTypes from "prop-types";
 
-export default function RangeButton({ min, max, onChange }) {
+export default function RangeButton({ min, max, onChange, active = true }) {
   const [minVal, setMinVal] = useState(min);
   const [maxVal, setMaxVal] = useState(max);
 
@@ -35,7 +35,7 @@ export default function RangeButton({ min, max, onChange }) {
   }, [minVal, maxVal, onChange]);
 
   return (
-    <>
+    <button className={`slider-button ${active ? "" : "-inactive"}`}>
       {" "}
       <input
         type="range"
@@ -43,7 +43,7 @@ export default function RangeButton({ min, max, onChange }) {
         max="1000"
         value={minVal}
         onChange={(event) =>
-          setMinVal(Math.min(+event.target.value, maxVal - 1))
+          active && setMinVal(Math.min(+event.target.value, maxVal - 1))
         }
         className={`thumb thumb--zindex-${minVal > max - 100 ? "5" : "3"}`}
       />
@@ -53,7 +53,7 @@ export default function RangeButton({ min, max, onChange }) {
         max="1000"
         value={maxVal}
         onChange={(event) => {
-          setMaxVal(Math.max(+event.target.value, minVal + 1));
+          active && setMaxVal(Math.max(+event.target.value, minVal + 1));
         }}
         className="thumb thumb--zindex-4"
       />
@@ -66,7 +66,7 @@ export default function RangeButton({ min, max, onChange }) {
         <div className="slider__left-value">{minVal}</div>
         <div className="slider__right-value">{maxVal}</div>
       </div>
-    </>
+    </button>
   );
 }
 
@@ -74,6 +74,7 @@ RangeButton.propTypes = {
   min: PropTypes.number.isRequired,
   max: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
+  active: PropTypes.bool,
 };
 
 // https://dev.to/sandra_lewis/building-a-multi-range-slider-in-react-from-scratch-4dl1

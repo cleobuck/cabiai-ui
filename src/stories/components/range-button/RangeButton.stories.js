@@ -8,10 +8,20 @@ export default {
 
 const Template = (args) => <RangeButton {...args} />;
 
-export const normal = Template.bind({});
+export const active = Template.bind({});
 
-normal.args = {
+active.args = {
   min: 0,
   max: 1000,
   onChange: () => {},
+  active: true,
+};
+
+export const inactive = Template.bind({});
+
+inactive.args = {
+  min: 0,
+  max: 1000,
+  onChange: () => {},
+  active: false,
 };

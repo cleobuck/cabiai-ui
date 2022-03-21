@@ -1,7 +1,15 @@
 @import "../../styles/colors/colors.scss";
 @import "../../styles/text-styles/textStyles.scss";
+@import "../../styles/buttons/button.scss";
 
-$width: 250px;
+$width: 200px;
+
+.slider-button {
+  width: 362px;
+  @extend .outline-button;
+  background: $light-font;
+  height: 86px;
+}
 .slider {
   position: relative;
   width: $width;
@@ -81,16 +89,41 @@ $width: 250px;
 
 .slider__left-value,
 .slider__right-value {
-  color: #dee2e6;
-  font-size: 12px;
-  margin-top: 20px;
+  color: $light-font;
+  background: $primary-color;
+  padding: 0 7px;
+  min-width: 26px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  @extend .caption-text;
+
+  top: 0;
   position: absolute;
+  transform: translateY(-50%);
 }
 
 .slider__left-value {
-  left: 6px;
+  left: -50px;
 }
 
 .slider__right-value {
-  right: -4px;
+  right: -50px;
+}
+
+.slider-button.-inactive {
+  border: 1px solid $placeholder-font;
+
+  .slider__right-value,
+  .slider__left-value,
+  .slider__range,
+  .thumb::-webkit-slider-thumb {
+    background-color: $placeholder-font;
+  }
+
+  .thumb::-moz-range-thumb {
+    background-color: $placeholder-font;
+  }
 }
