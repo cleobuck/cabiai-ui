@@ -21,6 +21,7 @@
     justify-content: flex-start;
     text-align: left;
     padding-left: 16px;
+    color: $placeholder-font;
   }
   img {
     position: absolute;
@@ -29,5 +30,24 @@
     transform: translateY(-50%);
     width: 32px;
     height: 32px;
+  }
+
+  &.-generic {
+    background: transparent;
+    border: 1px solid $inactive-color;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    input {
+      @extend .subtitle-1;
+    }
+
+    &.-focused {
+      border-color: $dark-font;
+      input {
+        color: $dark-font;
+      }
+    }
   }
 }
