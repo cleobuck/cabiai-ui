@@ -4,7 +4,7 @@ import InfoIcon from "../../assets/svg/info-icon/InfoIcon";
 import SuccessIcon from "../../assets/svg/success-icon/SuccessIcon";
 import WarningIcon from "../../assets/svg/warning-icon/WarningIcon";
 
-export default function MessageSystem({ type, message }) {
+export default function PopUp({ type, message }) {
 	return (
 		<div className={`message-system message-system-${type}`}>
 			{type === "success" && <SuccessIcon className="message-success-icon" />}

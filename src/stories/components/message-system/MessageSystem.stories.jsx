@@ -1,11 +1,12 @@
-import MessageSystem from "./MessageSystem";
+import PopUp from "./PopUp";
+
 import "./MessageSystem.scss";
 export default {
-	title: "components/message system",
-	components: MessageSystem,
+	title: "components/messages/pop-ups",
+	components: PopUp,
 };
 
-const Template = (args) => <MessageSystem {...args} />;
+const Template = (args) => <PopUp {...args} />;
 
 export const Warning = Template.bind({});
 
