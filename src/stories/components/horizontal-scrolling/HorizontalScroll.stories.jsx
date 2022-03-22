@@ -11,10 +11,10 @@ export default {
 
 const Template = args => <HorizontalScroll {...args} />;
 
-export const normal = Template.bind({});
+export const destinationPortrait = Template.bind({});
 
 
-normal.args = {
+destinationPortrait.args = {
   title: "Catégories",
   dimensions: {
     height: "256px",
@@ -25,3 +25,22 @@ normal.args = {
 
   data: mockDestinations
 }
+
+
+export const destinationLandscape = Template.bind({});
+
+
+destinationLandscape.args = {
+  title: "Catégories",
+  dimensions: {
+    height: "142px",
+    width: "242px"
+  },
+  overlay: true,
+  TemplateComponent: DestinationTemplate,
+
+  data: mockDestinations
+}
+
+
+

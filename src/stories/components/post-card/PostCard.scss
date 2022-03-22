@@ -1,0 +1,61 @@
+@import "../../styles/colors/colors.scss";
+@import "../../styles/text-styles/textStyles.scss";
+
+.post-card {
+  width: 90%;
+  max-width: 347px;
+  height: 160px;
+  background: $light-font;
+  box-shadow: -0.5px 0.5px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &-date-line {
+    display: flex;
+    align-items: center;
+    .date-line-text {
+      display: flex;
+      justify-content: space-between;
+      color: $secondary-color-1;
+      @extend .body-2;
+      .date-separator {
+        color: $dark-font;
+      }
+      .date-separator,
+      .card-date-dot {
+        margin: 0 3px;
+      }
+      .card-date-dot,
+      .card-total-days {
+        color: $placeholder-font;
+      }
+    }
+
+    .badge {
+      margin-left: auto;
+      @extend .caption-text;
+    }
+    .post-favorite-close {
+      margin-left: auto;
+      fill: $primary-color;
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &-title {
+    @extend .header-6;
+    text-align: left;
+  }
+
+  .badge-list {
+    display: flex;
+    width: 80%;
+    .badge {
+      margin-right: 8px;
+    }
+  }
+}
