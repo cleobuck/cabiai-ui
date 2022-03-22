@@ -2,7 +2,7 @@ import React from "react";
 import PlusMinusButton from "./PlusMinusButton"
 
 export default {
-  title: "components/plus-minus-button",
+  title: "components/inputs/plus-minus",
   component: PlusMinusButton
 }
 

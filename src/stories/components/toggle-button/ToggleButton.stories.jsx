@@ -2,7 +2,7 @@ import React from "react";
 import ToggleButton from "./ToggleButton";
 
 export default  {
-    title: "components/toggle button",
+    title: "components/inputs/toggle",
     component: ToggleButton
 }
 

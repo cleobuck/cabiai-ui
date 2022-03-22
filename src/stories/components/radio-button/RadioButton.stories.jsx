@@ -2,7 +2,7 @@ import React from "react";
 import RadioButton from "./RadioButton";
 
 export default  {
-    title: "components/radio button",
+    title: "components/inputs/radio",
     component: RadioButton
 }
 

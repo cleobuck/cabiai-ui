@@ -2,7 +2,7 @@ import React from "react";
 import SexChoice from "./SexChoice"
 
 export default {
-  title: "components/sex choice button",
+  title: "components/inputs/sex choice",
   component: SexChoice
 }
 

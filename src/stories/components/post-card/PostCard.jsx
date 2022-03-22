@@ -1,5 +1,5 @@
 import React from 'react'
-import Badges from '../../styles/badges/Badges';
+import Badges from '../badges/Badges';
 import "./PostCard.scss";
 import { formatDate } from '../../utils/DateUtils';
 import { calculateDays } from '../../utils/DateUtils';

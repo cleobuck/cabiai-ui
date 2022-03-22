@@ -2,7 +2,7 @@ import React from "react";
 import RangeButton from "./RangeButton";
 
 export default {
-  title: "components/range button",
+  title: "components/inputs/range",
   component: RangeButton,
 };
 

@@ -2,7 +2,7 @@ import React from "react"
 import Badges from "./Badges"
 
 export default {
-    title: "styles/stickers",
+    title: "components/stickers",
     component: Badges
 }
 

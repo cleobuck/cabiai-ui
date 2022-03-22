@@ -4,7 +4,7 @@ import ProfileIcon from "../../assets/svg/static/account-info.svg";
 import NavigationButton from "./NavigationButton"
 
 export default {
-  title: "components/navigation Button",
+  title: "components/buttons/navigation",
   component: NavigationButton
 }
 
