@@ -1,0 +1,58 @@
+@import "../../../styles/colors/colors.scss";
+@import "../../../styles/text-styles/textStyles.scss";
+
+.inline-message {
+	max-width: 330px;
+	height: 45px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: stretch;
+	@extend .subtitle-1;
+	font-size: 12px;
+	line-height: 14.63px;
+	letter-spacing: 0.4px;
+	svg {
+		width: 24px;
+		flex-basis: 24px;
+		flex-shrink: 0;
+		height: 21.6px;
+		margin-right: 16px;
+	}
+
+	&-success {
+		color: $success-color;
+		.inline-success-icon {
+			fill: $success-color;
+		}
+	}
+
+	&-error {
+		color: $error-color;
+		.inline-error-icon {
+			fill: $error-color;
+		}
+	}
+	&-information {
+		color: $information-color;
+		.inline-info-icon {
+			fill: $information-color;
+		}
+	}
+
+	&-warning {
+		color: $warning-color;
+		.inline-warning-icon {
+			fill: $warning-color;
+		}
+	}
+
+	p {
+		margin: 0;
+	}
+
+	.password-error-show {
+		color: $dark-font;
+		display: block;
+		text-decoration: underline;
+	}
+}

@@ -1,6 +1,5 @@
 import PopUp from "./PopUp";
 
-import "./MessageSystem.scss";
 export default {
 	title: "components/messages/pop-ups",
 	components: PopUp,
