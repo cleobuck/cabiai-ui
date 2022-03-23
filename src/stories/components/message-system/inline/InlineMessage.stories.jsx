@@ -1,5 +1,6 @@
 import InlineMessage from "./InlineMessage";
 import PasswordMessage from "./PasswordMessage";
+import ReinitializeEmail from "./ReinitializeEmail";
 
 export default {
 	title: "components/messages/inline-messages",
@@ -27,8 +28,7 @@ export const Success = Template.bind({});
 
 Success.args = {
 	type: "success",
-	message:
-		"Un lien pour réinitialiser ton mot de passe a été envoyé par e-mail à %emailadress%. Si tu ne reçois pas, vérifie l’adresse email saisie. ",
+	message: <ReinitializeEmail email="cleo.buck@gmail.com" />,
 };
 
 export const Information = Template.bind({});
