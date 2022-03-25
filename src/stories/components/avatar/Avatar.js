@@ -1,15 +1,27 @@
 import "./Avatar.scss";
 import React from "react";
-import ProfileIcon from "../../assets/svg/static/unknown-icon.svg";
+import AccountIcon from "../../assets/svg/account-icon/Account";
 
 export default function Avatar({ img, size, active = false }) {
-  return (
-    <figure
-      className={`avatar-wrapper ${active ? "-active" : ""}`}
-      style={{ width: size, height: size }}
-    >
-      {" "}
-      <img src={img || ProfileIcon} alt="user profile" />
-    </figure>
-  );
+	return img ? (
+		<figure
+			className={`avatar-wrapper ${active ? "-active" : ""}`}
+			style={{ width: `${size}px`, height: `${size}px` }}
+		>
+			<img src={img} alt="user profile" />
+		</figure>
+	) : (
+		<figure
+			className={`avatar-wrapper ${active ? "-active" : ""}`}
+			style={{ width: `${size}px`, height: `${size}px` }}
+		>
+			<AccountIcon className="default-image" />
+			{size >= 100 && (
+				<button style={{ width: `${size}px` }} className="button-text">
+					{" "}
+					Uploader une photo
+				</button>
+			)}
+		</figure>
+	);
 }

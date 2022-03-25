@@ -12,6 +12,7 @@ $secondary-color-1: #f28963;
 $secondary-color-2: #024873;
 $secondary-color-3: #f25e5e;
 $inactive-color: #adbfc1;
+$inactive-background: #80898a;
 
 @mixin background-gradient() {
 	background: linear-gradient(
