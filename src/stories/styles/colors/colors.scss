@@ -14,6 +14,10 @@ $secondary-color-3: #f25e5e;
 $inactive-color: #adbfc1;
 $inactive-background: #80898a;
 
+.overlay-background {
+	background: rgba(38, 44, 45, 0.6);
+}
+
 @mixin background-gradient() {
 	background: linear-gradient(
 		270deg,

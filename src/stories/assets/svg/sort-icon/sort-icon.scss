@@ -1,0 +1,12 @@
+@import "../../../styles/colors/colors.scss";
+
+.sort-icon {
+	width: 32px;
+	height: 32px;
+	path {
+		fill: $inactive-background;
+		&.-active {
+			fill: $inactive-background;
+		}
+	}
+}
