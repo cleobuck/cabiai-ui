@@ -1,0 +1,11 @@
+@import "../../../styles/colors/colors.scss";
+
+.close-button {
+	&.standard {
+		width: 15px;
+		height: 15px;
+		path {
+			fill: $dark-font;
+		}
+	}
+}

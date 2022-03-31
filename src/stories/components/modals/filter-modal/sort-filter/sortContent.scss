@@ -1,0 +1,27 @@
+@import "../../../../styles/colors/colors.scss";
+@import "../../../../styles/text-styles/textStyles.scss";
+
+.modal-sorting-list {
+	list-style-type: none;
+	width: 100%;
+
+	li {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		@extend .subtitle-1;
+		margin-bottom: 30px;
+	}
+	&.-filter {
+		li {
+			justify-content: flex-start;
+			img {
+				order: 1;
+			}
+			span {
+				margin-left: 16px;
+				order: 2;
+			}
+		}
+	}
+}
