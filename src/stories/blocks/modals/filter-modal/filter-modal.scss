@@ -1,0 +1,67 @@
+@import "../../../styles/colors/colors.scss";
+@import "../../../styles/text-styles/textStyles.scss";
+
+body {
+	height: 100vwh;
+	overflow: hidden;
+}
+.filter-modal {
+	background: $light-font;
+	position: absolute;
+	max-width: 900px;
+
+	z-index: 3;
+	width: 100%;
+	min-height: 60%;
+	bottom: 0;
+	transform: translateY(70%);
+	transition: transform 1s;
+	&.-open {
+		transform: translateY(-0%);
+		transition: transform 1s;
+	}
+
+	padding: 24px 29px 50px 29px;
+	border-top-right-radius: 18px;
+	border-top-left-radius: 18px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&-drag-line {
+		width: 81px;
+		height: 2.5px;
+
+		background: $dark-font;
+		border-radius: 58px;
+
+		margin-bottom: 18px;
+	}
+
+	&-title {
+		width: 100%;
+		display: flex;
+		.filter-close {
+			margin-left: auto;
+		}
+		@extend .header-6;
+	}
+
+	&-content {
+		margin-top: 40px;
+		width: 100%;
+	}
+
+	&-buttons {
+		margin-top: auto;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		.filter-apply-button {
+			width: 186px;
+			@extend .subtitle-2;
+		}
+		.filter-erase-button {
+			text-decoration: underline;
+		}
+	}
+}

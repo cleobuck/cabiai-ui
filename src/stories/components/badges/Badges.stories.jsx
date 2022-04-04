@@ -1,31 +1,37 @@
-import React from "react"
-import Badges from "./Badges"
+import React from "react";
+import Badges from "./Badges";
 
 export default {
-    title: "components/stickers",
-    component: Badges
-}
+	title: "components/stickers",
+	component: Badges,
+};
 
+const Template = (args) => <Badges {...args} />;
 
-const Template = args => <Badges {...args}/>
-
-export const active = Template.bind({})
+export const active = Template.bind({});
 
 active.args = {
-    title: "montagne",
-    active: true
-}
+	title: "montagne",
+	active: true,
+};
 
-export const inactive = Template.bind({})
+export const inactive = Template.bind({});
 
 inactive.args = {
-    title: "montagne",
-    active: false
-}
+	title: "montagne",
+	active: false,
+};
 
-export const neutral = Template.bind({})
+export const neutral = Template.bind({});
 
 neutral.args = {
-    title: "Date flexible",
-    neutral: true
-}
+	title: "Date flexible",
+	neutral: true,
+};
+
+export const closable = Template.bind({});
+
+closable.args = {
+	title: "Islande",
+	chosen: true,
+};

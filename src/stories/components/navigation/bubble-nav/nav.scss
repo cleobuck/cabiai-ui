@@ -1,0 +1,28 @@
+/** @format */
+@import "../../../styles/colors/colors.scss";
+
+.progress-bar {
+	display: flex;
+	width: 400px;
+	justify-content: space-around;
+	padding: 0 10vw;
+	padding-top: 30px;
+	margin: 0 auto;
+	height: 31px;
+	align-items: center;
+}
+.bubble {
+	width: 25px;
+	height: 25px;
+	background-color: $light-font;
+	cursor: pointer;
+
+	display: block;
+	border-radius: 100%;
+	&.active {
+		background-color: $primary-color;
+	}
+	&.done {
+		background-color: $primary-color-inactive;
+	}
+}

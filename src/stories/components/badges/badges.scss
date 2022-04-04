@@ -2,29 +2,45 @@
 @import "../../styles/text-styles/textStyles.scss";
 
 .badge {
-  width: 89px;
-  height: 30px;
-  border-radius: 100px;
+	width: 89px;
+	height: 30px;
+	border-radius: 100px;
 
-  border: 1px solid $inactive-font;
-  box-sizing: border-box;
-  border-radius: 100px;
-  color: $inactive-font;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
+	border: 1px solid $inactive-font;
+	box-sizing: border-box;
+	border-radius: 100px;
+	color: $inactive-font;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
 
-  @extend .caption-text;
+	@extend .caption-text;
 
-  &.-active {
-    background: $primary-color;
-    color: $light-font;
-    border: none;
-  }
-  &.-neutral {
-    background-color: $secondary-color-1;
-    color: $light-font;
-    border: none;
-  }
+	&.-active {
+		background: $primary-color;
+		color: $light-font;
+		border: none;
+	}
+	&.-neutral {
+		background-color: $secondary-color-1;
+		color: $light-font;
+		border: none;
+	}
+
+	&.-chosen {
+		border-color: $inactive-background;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 16px;
+		.close-badge {
+			width: 8px;
+			height: 8px;
+			color: $inactive-background;
+			path {
+				fill: $inactive-background;
+			}
+		}
+	}
 }

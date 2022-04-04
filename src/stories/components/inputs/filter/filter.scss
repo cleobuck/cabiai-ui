@@ -1,0 +1,31 @@
+@import "../../../styles/colors/colors.scss";
+@import "../../../styles/text-styles/textStyles.scss";
+
+.filter-button {
+	height: 30px;
+	width: 125px;
+	border: 1px solid $inactive-color;
+	box-sizing: border-box;
+	border-radius: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: none;
+	padding: 8px 0;
+	padding-left: 16px;
+	&.-active {
+		border: 2px solid $primary-color;
+	}
+	@extend .second-button-text;
+	.filter-chevron {
+		width: 13px;
+		height: 8px;
+		transform: rotate(-90deg);
+		margin-right: 12px;
+		margin-left: auto;
+
+		path {
+			fill: $inactive-font;
+		}
+	}
+}

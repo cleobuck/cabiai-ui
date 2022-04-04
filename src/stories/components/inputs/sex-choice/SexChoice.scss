@@ -1,0 +1,22 @@
+@import "../../../styles/colors/colors.scss";
+@import "../../../styles/text-styles/textStyles.scss";
+
+.sex-choice-button {
+	height: 110px;
+	width: 110px;
+	box-shadow: none;
+	border: 1px solid $placeholder-font;
+	flex-direction: column;
+	justify-content: center;
+	@extend .body-2;
+	padding: 0;
+	background: $light-font;
+	color: $placeholder-font;
+	img {
+		margin-bottom: 15px;
+	}
+	&.-active {
+		border: 1px solid $primary-color;
+		color: $primary-color;
+	}
+}

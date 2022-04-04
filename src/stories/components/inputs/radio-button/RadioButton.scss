@@ -1,0 +1,23 @@
+@import "../../../styles/colors/colors.scss";
+
+.radio-button {
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	border: 0.1px solid $inactive-color;
+	background: $light-font;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	&:hover {
+		background: $inactive-color;
+	}
+
+	.checked-radio-button {
+		width: 18px;
+		height: 18px;
+		border-radius: 100%;
+		background: $primary-color;
+	}
+}
