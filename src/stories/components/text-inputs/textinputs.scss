@@ -1,0 +1,36 @@
+// @import "~stories/styles/colors/colors.scss";
+
+@import "~stories/styles/colors/colors.scss";
+@import "~stories/styles/text-styles/textStyles.scss";
+.input-text {
+	border-radius: 12px;
+	border: 1px solid $inactive-color;
+	padding-left: 19px;
+	height: 50px;
+	display: flex;
+	flex-direction: column;
+	max-width: 340px;
+	width: 80%;
+	span {
+		@extend .subtitle-1;
+		font-size: 12px;
+		color: $placeholder-font;
+	}
+	input,
+	textarea {
+		@extend .subtitle-1;
+		border: none;
+		height: 100%;
+		display: flex;
+		background: transparent;
+		align-items: center;
+		color: $placeholder-font;
+		outline: none;
+		&:focus {
+			color: $dark-font;
+			&::placeholder {
+				color: transparent;
+			}
+		}
+	}
+}

@@ -1,0 +1,56 @@
+@import "../../../../styles/colors/colors.scss";
+@import "../../../../styles/text-styles/textStyles.scss";
+
+.modal-sorting-list {
+	list-style-type: none;
+	width: 100%;
+
+	li {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		@extend .subtitle-1;
+		margin-bottom: 30px;
+	}
+	&.-filter {
+		max-height: 300px;
+		overflow-y: scroll;
+
+		&::-webkit-scrollbar {
+			width: 5px;
+
+			// background: rgba(173, 191, 193, 0.5);
+			border-radius: 58px;
+		}
+
+		/* Track */
+		&::-webkit-scrollbar-track {
+			background: transparent;
+			border-radius: 58px;
+		}
+
+		/* Handle */
+		&::-webkit-scrollbar-thumb {
+			background: rgba(173, 191, 193, 0.5);
+			height: 10px;
+			border-radius: 58px;
+		}
+
+		/* Handle on hover */
+		&::-webkit-scrollbar-thumb:hover {
+			background: rgba(173, 191, 193, 0.5);
+			border-radius: 58px;
+		}
+
+		li {
+			justify-content: flex-start;
+			img {
+				order: 1;
+			}
+			span {
+				margin-left: 16px;
+				order: 2;
+			}
+		}
+	}
+}
