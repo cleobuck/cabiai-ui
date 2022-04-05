@@ -9,12 +9,17 @@
 	height: 50px;
 	display: flex;
 	flex-direction: column;
+<<<<<<< HEAD
 	align-items: stretch;
 	max-width: 340px;
 	width: 80%;
 	&.-focused {
 		border-color: $primary-color;
 	}
+=======
+	max-width: 340px;
+	width: 80%;
+>>>>>>> 5c94e170256aea62b1a76d2842d39c452f356d95
 	span {
 		@extend .subtitle-1;
 		font-size: 12px;
@@ -26,7 +31,10 @@
 		border: none;
 		height: 100%;
 		display: flex;
+<<<<<<< HEAD
 		width: 100%;
+=======
+>>>>>>> 5c94e170256aea62b1a76d2842d39c452f356d95
 		background: transparent;
 		align-items: center;
 		color: $placeholder-font;
