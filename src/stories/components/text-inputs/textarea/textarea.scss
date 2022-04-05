@@ -1,0 +1,22 @@
+@import "~stories/styles/colors/colors.scss";
+@import "~stories/styles/text-styles/textStyles.scss";
+
+.textarea {
+	height: 270px;
+	padding: 14px;
+	padding-top: 6px;
+	textarea {
+		@extend .subtitle-1;
+		color: $dark-font;
+		&.-unfocused {
+			color: $placeholder-font;
+		}
+	}
+}
+
+.textarea-charcount {
+	text-align: right;
+	width: 80%;
+	@extend .caption-text;
+	color: $dark-font;
+}

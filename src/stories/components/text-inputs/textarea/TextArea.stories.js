@@ -5,6 +5,11 @@ export default {
 	component: TextArea,
 };
 
-const Template = (args) => <TextArea />;
+const Template = (args) => <TextArea {...args} />;
 
 export const Empty = Template.bind({});
+
+Empty.args = {
+	title: "Description",
+	maxLength: 500,
+};
