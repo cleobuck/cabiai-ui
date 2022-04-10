@@ -19,9 +19,12 @@ export default function Select({ choices, title }) {
 					<label
 						key={pickedValue.id}
 						htmlFor="my-dropdown"
-						className="custom-dropdown-label"
+						className={`custom-dropdown-label ${
+							pickedValue.id !== 0 ? "-open" : ""
+						}`}
 						data-toggle="dropdown"
 					>
+						{pickedValue.id !== 0 && <span> {title} </span>}
 						{pickedValue.title}
 					</label>
 

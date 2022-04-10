@@ -18,9 +18,16 @@
 		height: 100%;
 		width: 100%;
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		justify-content: center;
 		@extend .subtitle-1;
 		color: $placeholder-font;
+		&.-open {
+			color: $dark-font;
+			span {
+				color: $inactive-color;
+			}
+		}
 	}
 	button {
 		cursor: pointer;
