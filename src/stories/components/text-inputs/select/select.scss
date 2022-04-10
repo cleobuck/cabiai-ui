@@ -1,0 +1,109 @@
+// @import "~stories/styles/colors/colors.scss";
+// @import "~stories/styles/text-styles/textStyles.scss";
+
+// .custom-dropdown {
+// 	position: absolute;
+// 	display: inline-block;
+// 	z-index: 10;
+// 	width: 100%;
+// 	width: calc(100% - 20px);
+// 	top: 50%;
+// 	left: 50%;
+// 	transform: translate(-50%, -50%);
+// }
+
+// .custom-dropdown-list-item,
+// .custom-dropdown-label {
+// 	//.useColor(darkest);
+// 	color: black;
+// 	height: 35px;
+// 	width: 100%;
+// 	display: inline-block;
+// 	padding: 6px 15px;
+// 	line-height: 1.5em;
+// 	//text-decoration: none;
+// 	//font-weight: bold;
+// 	//font-size: 16px;
+// 	&.-disabled {
+// 		color:black);
+// 	}
+// }
+
+// .custom-dropdown-list-item {
+// 	//background: #C5C5C5;
+// 	background-color: green;
+// }
+
+// .custom-dropdown-label {
+// 	position: relative;
+// 	z-index: 2;
+// }
+
+// .label-wrapper {
+// 	//background: #C5C5C5;
+// 	background-color: blue;
+// 	text-align: left;
+// 	position: relative;
+// 	border-radius: 5px;
+
+// 	.thin-arrow-up {
+// 		display: none;
+// 	}
+
+// 	button {
+// 		background: transparent;
+// 		position: absolute;
+// 		right: 13px;
+// 		top: 50%;
+// 		transform: translateY(-50%);
+// 		border: 0;
+// 		z-index: 1;
+// 		img {
+// 			width: 15px;
+// 		}
+// 	}
+
+// 	&.-isOpen {
+// 		border-bottom-left-radius: 0;
+// 		border-bottom-right-radius: 0;
+
+// 		.thin-arrow-down {
+// 			display: none;
+// 		}
+
+// 		.thin-arrow-up {
+// 			display: block;
+// 		}
+// 	}
+// }
+
+// .custom-dropdown > ul {
+// 	position: absolute;
+// 	z-index: 999;
+// 	display: block;
+// 	left: -200vw;
+// 	border-bottom-right-radius: 5px;
+// 	border-bottom-left-radius: 5px;
+// 	max-height: 0;
+// 	overflow: hidden;
+// 	transition: max-height 3s;
+// 	top: calc(1.5em + 9px);
+// 	&.-isOpen {
+// 		left: 0;
+// 		max-height: 500px;
+// 	}
+// 	//background: #C5C5C5;
+// 	background-color: green;
+// 	padding: 0;
+// 	margin: 0;
+// 	list-style: none;
+// 	width: 100%;
+// 	li {
+// 		text-align: left;
+// 	}
+// 	a {
+// 		color: black;
+// 		text-decoration: none;
+// 		//text-transform: capitalize;
+// 	}
+// }
