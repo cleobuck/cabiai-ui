@@ -10,12 +10,14 @@ export default function Select({ choices, title }) {
 		title: title,
 	});
 	return (
-		<div className={`input-text`}>
+		<div
+			className={`input-text select-input ${isOpen ? "-open" : ""}`}
+			onClick={() => toggleDropDown((isOpen) => !isOpen)}
+		>
 			<div className="custom-dropdown">
 				<div className={`label-wrapper ${isOpen ? "-isOpen" : ""}`}>
 					<label
 						key={pickedValue.id}
-						onClick={() => toggleDropDown((isOpen) => !isOpen)}
 						htmlFor="my-dropdown"
 						className="custom-dropdown-label"
 						data-toggle="dropdown"

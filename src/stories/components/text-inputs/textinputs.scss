@@ -6,6 +6,13 @@
 	border-radius: 12px;
 	border: 1px solid $inactive-color;
 	padding-left: 19px;
+	&.select-input {
+		padding-left: 0;
+		&.-open {
+			border-bottom-right-radius: 0%;
+			border-bottom-left-radius: 0%;
+		}
+	}
 	height: 50px;
 	display: flex;
 	flex-direction: column;
@@ -15,6 +22,7 @@
 	&.-focused {
 		border-color: $primary-color;
 	}
+
 	span {
 		@extend .subtitle-1;
 		font-size: 12px;

@@ -7,26 +7,28 @@ export default {
 
 const Template = (args) => <Select {...args} />;
 
+const choices = [
+	{
+		id: 1,
+		title: "Australie",
+		value: "AUS",
+	},
+
+	{
+		id: 2,
+		title: "Angleterre",
+		value: "UK",
+	},
+	{
+		id: 3,
+		title: "Belgique",
+		value: "BE",
+	},
+];
+
 export const unSelected = Template.bind({});
 
 unSelected.args = {
-	title: "pays",
-	choices: [
-		{
-			id: 1,
-			title: "Australie",
-			value: "AUS",
-		},
-
-		{
-			id: 2,
-			title: "Angleterre",
-			value: "UK",
-		},
-		{
-			id: 3,
-			title: "Belgique",
-			value: "BE",
-		},
-	],
+	title: "Pays",
+	choices: choices,
 };
