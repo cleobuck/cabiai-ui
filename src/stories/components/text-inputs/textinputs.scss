@@ -6,6 +6,13 @@
 	border-radius: 12px;
 	border: 1px solid $inactive-color;
 	padding-left: 19px;
+
+	input[type="date"] {
+		padding-right: 5px;
+		&::-webkit-calendar-picker-indicator {
+			opacity: 0;
+		}
+	}
 	&.select-input {
 		padding-left: 0;
 		&.-open {
@@ -43,6 +50,11 @@
 			color: $dark-font;
 			&::placeholder {
 				color: transparent;
+			}
+			&[type="date"] {
+				&::-webkit-calendar-picker-indicator {
+					opacity: 1;
+				}
 			}
 		}
 	}

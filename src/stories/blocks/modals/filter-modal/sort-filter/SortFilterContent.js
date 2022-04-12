@@ -1,6 +1,7 @@
 import React from "react";
 import RadioButton from "stories/components/inputs/radio-button/RadioButton";
 import CheckBox from "stories/components/inputs/checkbox/CheckBox";
+import "./sortContent.scss";
 
 export default function SortContent({ options, type }) {
 	return (

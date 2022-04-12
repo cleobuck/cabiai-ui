@@ -16,6 +16,5 @@ unSelected.args = {
 export const selected = Template.bind({});
 
 selected.args = {
-	focused: true,
 	placeholder: "Adresse email",
 };
