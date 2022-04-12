@@ -1,20 +1,14 @@
 import TextInput from "./TextInput";
 
 export default {
-	title: "components/text inputs/texts",
+	title: "components/text inputs",
 	component: TextInput,
 };
 
 const Template = (args) => <TextInput {...args} />;
 
-export const unSelected = Template.bind({});
+export const Texts = Template.bind({});
 
-unSelected.args = {
-	placeholder: "Adresse email",
-};
-
-export const selected = Template.bind({});
-
-selected.args = {
+Texts.args = {
 	placeholder: "Adresse email",
 };

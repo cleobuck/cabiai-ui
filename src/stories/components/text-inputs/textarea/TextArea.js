@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "./textarea.scss";
 import "../textinputs.scss";
+import useFocus from "../../../utils/useFocus";
 export default function TextArea({
 	title,
 	description = "description",
 	maxLength = 0,
 }) {
-	const [isFocused, setFocus] = useState(false);
+	const [ref, isFocused] = useFocus();
 	const [text, setText] = useState("");
 
 	const write = (e) => {
@@ -14,11 +15,10 @@ export default function TextArea({
 	};
 	return (
 		<>
-			<div className="input-text textarea">
+			<div ref={ref} className="input-text textarea">
 				{isFocused && <span> {description} </span>}
 				<textarea
 					placeholder={description}
-					onClick={() => setFocus(true)}
 					onChange={write}
 					className={!isFocused ? "-unfocused" : ""}
 				/>

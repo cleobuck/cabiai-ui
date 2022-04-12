@@ -1,10 +1,13 @@
 import React from "react";
 import "./textinput.scss";
 import "../textinputs.scss";
+
+import useFocus from "../../../utils/useFocus";
 export default function TextInput({ placeholder, focused }) {
+	const [ref, isFocused] = useFocus();
 	return (
-		<div className={`${focused ? "focused" : ""} input-text`}>
-			{focused && <span> {placeholder} </span>}
+		<div ref={ref} className={`${isFocused ? "focused" : ""} input-text`}>
+			{isFocused && <span> {placeholder} </span>}
 			<input type="text" placeholder={placeholder} />
 		</div>
 	);

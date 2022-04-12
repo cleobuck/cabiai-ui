@@ -1,14 +1,14 @@
 import DateInput from "./DateInput";
 
 export default {
-	title: "components/text inputs/date",
+	title: "components/text inputs",
 	component: DateInput,
 };
 
 const Template = (args) => <DateInput {...args} />;
 
-export const Default = Template.bind({});
+export const Date = Template.bind({});
 
-Default.args = {
+Date.args = {
 	placeholder: "Date de naissance",
 };
