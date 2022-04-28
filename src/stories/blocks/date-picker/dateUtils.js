@@ -34,7 +34,7 @@ export function getDay(number) {
 	][number - 1];
 }
 
-export const firstLetterOfDays = ["S", "M", "T", "W", "T", "F", "S"];
+export const firstLetterOfDays = ["Lu", "Ma", "Me", "Je", "Ve", "Sa", "Di"];
 
 export const getMonthData = (year, month) => {
 	return {
@@ -59,18 +59,19 @@ export function range(start, end) {
 
 export const CalendarLoop = (month) => {
 	let day = month.firstDayObject;
-	const weekdayOfFirstDay = month.firstDayObject.getDay();
+	const weekdayOfFirstDay =
+		month.firstDayObject.getDay() !== 0 ? month.firstDayObject.getDay() : 7;
 
 	let currentDays = [];
 	let monthStarted = false;
 	let monthEnded = false;
 
-	for (let cell = 0; cell < 43; cell++) {
+	for (let cell = 1; cell < 44; cell++) {
 		if ((!monthStarted && cell !== weekdayOfFirstDay) || monthEnded) {
 			currentDays.push({
 				empty: true,
 			});
-			console.log("yes");
+
 			continue;
 		}
 
@@ -80,7 +81,6 @@ export const CalendarLoop = (month) => {
 			day.setDate(day.getDate() + 1);
 			if (day.getMonth() !== month.month) {
 				monthEnded = true;
-				console.log(monthEnded);
 				continue;
 			}
 		}
@@ -92,7 +92,7 @@ export const CalendarLoop = (month) => {
 			selected: day.toDateString() === month.firstDayObject.toDateString(),
 			year: day.getFullYear(),
 		};
-		console.log(calendarDay);
+
 		currentDays.push(calendarDay);
 	}
 
